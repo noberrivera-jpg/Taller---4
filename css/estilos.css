@@ -1,0 +1,270 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+    background: #ffffff;
+}
+
+/* Menú principal */
+.body-menu {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-principal {
+    width: 90%;
+    max-width: 700px;
+    padding: 50px 40px;
+    text-align: center;
+    border: 1px solid #dddddd;
+}
+
+.menu-principal h1 {
+    margin: 0 0 30px;
+    font-size: 38px;
+}
+
+.menu-horizontal {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.menu-horizontal a {
+    color: #0000ee;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-horizontal a:hover {
+    text-decoration: underline;
+}
+
+/* RF1 */
+.pagina-rf1 {
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto;
+    background: #f4f4f9;
+}
+
+.titulo-rf1 {
+    width: 100%;
+    background: #000000;
+    padding: 28px 20px 20px;
+}
+
+.titulo-rf1 h1 {
+    margin: 0;
+    color: #ffffff;
+    text-align: center;
+    font-size: clamp(45px, 7vw, 78px);
+    line-height: 1;
+    font-weight: 700;
+}
+
+.cards-rf1 {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    padding: 18px 18px 20px;
+}
+
+.card-rf1 {
+    width: 23%;
+    background: #ffffff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.18);
+}
+
+.card-rf1 > img {
+    width: 100%;
+    height: 150px;
+    display: block;
+    object-fit: cover;
+}
+
+.contenido-card {
+    padding: 14px 12px 15px;
+}
+
+.contenido-card h2 {
+    margin: 0 0 8px;
+    color: #c72f63;
+    font-size: 21px;
+}
+
+.contenido-card p {
+    margin: 0;
+    color: #666666;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.banner-flexbox {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* RF2 */
+.pagina-rf2 {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 45px 55px 50px;
+    background: #f3f1ff;
+}
+
+.pagina-rf2 h1 {
+    margin: 0 0 28px;
+    text-align: center;
+    color: #333333;
+    font-size: 21px;
+    font-weight: 400;
+}
+
+.galeria-rf2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 18px;
+    row-gap: 23px;
+}
+
+.item-rf2 {
+    text-align: center;
+}
+
+.item-rf2 img {
+    width: 100%;
+    height: 118px;
+    display: block;
+    object-fit: cover;
+}
+
+.item-rf2 p {
+    margin: 8px 0 0;
+    font-size: 13px;
+    color: #333333;
+}
+
+/* RF3 */
+.pagina-rf3 {
+    width: 100%;
+    max-width: 870px;
+    margin: 30px auto;
+    padding: 5px 20px 40px;
+    background: #ffffff;
+}
+
+.encabezado-rf3 h1 {
+    margin: 0 0 17px;
+    color: #5a839c;
+    font-size: 31px;
+    font-weight: 400;
+}
+
+.encabezado-rf3 p {
+    margin: 0 0 8px;
+    color: #777777;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.servicios-rf3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 55px;
+    row-gap: 45px;
+    margin-top: 43px;
+}
+
+.servicio-rf3 {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    column-gap: 18px;
+    align-items: start;
+}
+
+.servicio-rf3 > img {
+    width: 42px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.servicio-rf3 h2 {
+    margin: 0 0 15px;
+    color: #5a839c;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.servicio-rf3 p {
+    margin: 0;
+    color: #777777;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.boton-rf3 {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 9px 18px;
+    background: #3d7ba2;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.boton-rf3:hover {
+    background: #346b8d;
+}
+
+@media (max-width: 760px) {
+    .cards-rf1 {
+        flex-wrap: wrap;
+    }
+
+    .card-rf1 {
+        width: 46%;
+    }
+
+    .servicios-rf3 {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-rf2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+    .card-rf1,
+    .item-rf2 {
+        width: 100%;
+    }
+
+    .cards-rf1 {
+        flex-direction: column;
+    }
+
+    .galeria-rf2 {
+        grid-template-columns: 1fr;
+    }
+
+    .pagina-rf2 {
+        padding: 30px 20px 35px;
+    }
+
+    .menu-horizontal {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
